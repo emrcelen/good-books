@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: Goodbooks
+  output:
+    ansi:
+      enabled: ALWAYS
+  jpa:
+    hibernate:
+      ddl-auto: update
+      database-platform: org.hibarnate.dialect.PostgreSQLDialect
+      properties:
+        hibernate:
+          default_schema: good_books
+  datasource:
+    url: "jdbc:postgresql://localhost:5434/good_books"
+    username: postgres
+    password: 123456
+info:
+  component: Real World Application
+  version: 0.0.1
+server:
+  port: 9090
