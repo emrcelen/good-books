@@ -12,9 +12,9 @@ spring:
         hibernate:
           default_schema: good_books
   datasource:
-    url: "jdbc:postgresql://localhost:5434/good_books"
-    username: postgres
-    password: 123456
+    url: "jdbc:postgresql://localhost:5432/goodbooks"
+    username: realworld
+    password: realworld
 info:
   component: Real World Application
   version: 0.0.1
