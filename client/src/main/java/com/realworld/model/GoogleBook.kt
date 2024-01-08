@@ -7,6 +7,7 @@ data class GoogleBook(
     val publisher: String?,
     val pageCount: Int?,
     val authors: List<GoogleAuthor>?,
+    val categories: List<String>?,
     val imageLinks: GoogleBookImage?,
     val saleInfo: GoogleSaleInfo?,
     val pdfLink: String?
@@ -18,6 +19,7 @@ data class GoogleBook(
         builder.publisher,
         builder.pageCount,
         builder.authors,
+        builder.categories,
         builder.imageLinks,
         builder.saleInfo,
         builder.pdfLink
@@ -36,6 +38,8 @@ data class GoogleBook(
             private set
         var authors: List<GoogleAuthor>? = null
             private set
+        var categories: List<String>? = null
+            private set
         var imageLinks: GoogleBookImage? = null
             private set
         var saleInfo: GoogleSaleInfo? = null
@@ -46,9 +50,10 @@ data class GoogleBook(
         fun bookId(bookId: String) = apply { this.bookId = bookId }
         fun title(title: String) = apply { this.title = title }
         fun description(description: String?) = apply { this.description = description }
-        fun publisher (publisher: String?) = apply { this.publisher = publisher }
+        fun publisher(publisher: String?) = apply { this.publisher = publisher }
         fun pageCount(pageCount: Int?) = apply { this.pageCount = pageCount }
-        fun authors(authors: List<GoogleAuthor> ?) = apply { this.authors = authors }
+        fun authors(authors: List<GoogleAuthor>?) = apply { this.authors = authors }
+        fun categories(categories: List<String>?) = apply { this.categories = categories }
         fun imageLinks(imageLinks: GoogleBookImage?) = apply { this.imageLinks = imageLinks }
         fun saleInfo(saleInfo: GoogleSaleInfo?) = apply { this.saleInfo = saleInfo }
         fun pdfLink(pdfLink: String?) = apply { this.pdfLink = pdfLink }

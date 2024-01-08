@@ -29,6 +29,7 @@ public class GoogleBookConverter {
                 .publisher(book.getVolumeInfo().getPublisher())
                 .pageCount(book.getVolumeInfo().getPageCount())
                 .authors(googleAuthors)
+                .categories(book.getVolumeInfo().getCategories())
                 .imageLinks(imageLinks)
                 .saleInfo(saleInfo)
                 .pdfLink(book.getAccessInfo().getPdf().getAcsTokenLink())
@@ -70,6 +71,10 @@ public class GoogleBookConverter {
         return new GoogleBookImage.Builder()
                 .smallThumbnail(imageLinks.getSmallThumbnail())
                 .thumbnail(imageLinks.getThumbnail())
+                .small(imageLinks.getSmall())
+                .medium(imageLinks.getMedium())
+                .large(imageLinks.getLarge())
+                .extraLarge(imageLinks.getExtraLarge())
                 .build();
     }
     private GoogleSaleInfo convertToGoogleSaleInfo(SaleInfo saleInfo) {
