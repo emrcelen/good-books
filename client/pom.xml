@@ -11,10 +11,24 @@
 
     <artifactId>client</artifactId>
 
-    <properties>
-        <maven.compiler.source>18</maven.compiler.source>
-        <maven.compiler.target>18</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <dependencies>
+        <!--Persistence-->
+        <dependency>
+            <groupId>com.realworld</groupId>
+            <artifactId>persistence</artifactId>
+        </dependency>
+        <!--Google Client-->
+        <dependency>
+            <groupId>com.google.api-client</groupId>
+            <artifactId>google-api-client</artifactId>
+            <version>1.31.1</version>
+        </dependency>
+        <!--Google Book Service-->
+        <dependency>
+            <groupId>com.google.apis</groupId>
+            <artifactId>google-api-services-books</artifactId>
+            <version>v1-rev114-1.25.0</version>
+        </dependency>
+    </dependencies>
 
 </project>
