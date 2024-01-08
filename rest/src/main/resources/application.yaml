@@ -1,26 +1,15 @@
 spring:
   application:
     name: Goodbooks
+  config:
+    import:
+      - "application-persistence.yaml"
+      - "application-client.yaml"
   output:
     ansi:
       enabled: ALWAYS
-  jpa:
-    hibernate:
-      ddl-auto: update
-      properties:
-        hibernate:
-          dialect: org.hibernate.dialect.PostgreSQLDialect
-          default_schema: good_books
-  datasource:
-    url: "jdbc:postgresql://localhost:5432/goodbooks"
-    username: realworld
-    password: realworld
 info:
   component: Real World Application
   version: 0.0.1
-google:
-  books:
-    api:
-      key: AIzaSyCu9Sbgw5oKN6rmD63TKXhx9wMvlW7KiGM
 server:
   port: 9090
