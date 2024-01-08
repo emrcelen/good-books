@@ -7,9 +7,9 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-      database-platform: org.hibarnate.dialect.PostgreSQLDialect
       properties:
         hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
           default_schema: good_books
   datasource:
     url: "jdbc:postgresql://localhost:5432/goodbooks"
@@ -18,5 +18,9 @@ spring:
 info:
   component: Real World Application
   version: 0.0.1
+google:
+  books:
+    api:
+      key: AIzaSyCu9Sbgw5oKN6rmD63TKXhx9wMvlW7KiGM
 server:
   port: 9090
