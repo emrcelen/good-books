@@ -17,13 +17,13 @@ data class BookSaleInfo(
     @Embedded
     @AttributeOverrides(
         AttributeOverride(name = "amount", column = Column(name = "list_price_amount")),
-        AttributeOverride(name = "currencyCode", column = Column(name = "list_price_currency"))
+        AttributeOverride(name = "currencyCode", column = Column(name = "list_price_currency", length = 5))
     )
     var listPrice: SalePrice?,
     @Embedded
     @AttributeOverrides(
         AttributeOverride(name = "amount", column = Column(name = "retail_price_amount")),
-        AttributeOverride(name = "currencyCode", column = Column(name = "retail_price_currency"))
+        AttributeOverride(name = "currencyCode", column = Column(name = "retail_price_currency", length = 5))
     )
     var retailPrice: SalePrice?,
     var buyLink: String?,
