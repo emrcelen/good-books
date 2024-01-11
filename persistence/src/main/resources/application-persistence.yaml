@@ -6,6 +6,8 @@ spring:
         hibernate:
           dialect: org.hibernate.dialect.PostgreSQLDialect
           default_schema: good_books
+  liquibase:
+    change-log: classpath:/db/changelog/changelog-master.xml
   datasource:
     url: "jdbc:postgresql://localhost:5432/goodbooks"
     username: realworld
