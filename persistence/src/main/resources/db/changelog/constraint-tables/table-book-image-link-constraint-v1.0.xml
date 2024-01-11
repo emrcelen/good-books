@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet id="table-book-image-link-constraint-v1.0.xml" author="emrecelen">
+        <addForeignKeyConstraint baseTableName="book_image_links" baseColumnNames="book_id"
+                                 baseTableSchemaName="good_books" constraintName="fk_book_id"
+                                 referencedTableName="book" referencedColumnNames="book_id"
+                                 referencedTableSchemaName="good_books"/>
+    </changeSet>
+</databaseChangeLog>

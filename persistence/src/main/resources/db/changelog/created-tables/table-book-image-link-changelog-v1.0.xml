@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <changeSet id="table-book-image-link-changelog-v1.0.xml" author="emrecelen">
+        <createTable tableName="book_image_links" schemaName="good_books">
+            <column name="book_image_links_id" type="uuid">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="thumbnail" type="varchar(175)"/>
+            <column name="small_thumbnail" type="varchar(175)"/>
+            <column name="small" type="varchar(175)"/>
+            <column name="medium" type="varchar(175)"/>
+            <column name="large" type="varchar(175)"/>
+            <column name="extra_large" type="varchar(175)"/>
+            <column name="book_id" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
