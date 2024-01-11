@@ -24,10 +24,10 @@
             <scope>runtime</scope>
         </dependency>
         <!--Liquibase-->
-        <!--<dependency>
+        <dependency>
             <groupId>org.liquibase</groupId>
             <artifactId>liquibase-core</artifactId>
-        </dependency>-->
+        </dependency>
         <!--Kotlin-->
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
