@@ -6,7 +6,7 @@ import jakarta.persistence.Table
 @Entity(name = "BookCategories")
 @Table(name = "bookcategory", schema = "good_books")
 data class BookCategories(
-    var categoryName: String?,
+    val categoryName: String?,
     var bookCategory: Set<Book>?
 ) {
     protected constructor() : this(Builder())
@@ -21,8 +21,10 @@ data class BookCategories(
             private set
         var bookCategory: Set<Book>? = null
             private set
+
+        fun categoryName(categoryName: String) = apply { this.categoryName = categoryName }
+        fun bookCategory(bookCategory: Set<Book>) = apply { this.bookCategory = bookCategory }
     }
 
-    fun categoryName(categoryName: String) = apply { this.categoryName = categoryName }
-    fun bookCategory(bookCategory: Set<Book>) = apply { this.bookCategory = bookCategory }
+
 }

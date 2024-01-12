@@ -7,7 +7,7 @@ import jakarta.persistence.Table
 @Entity(name = "SocialMedia")
 @Table(name = "socialmedia", schema = "good_books")
 data class SocialMedia(
-    var name:String?,
+    val name:String?,
     var socialMedia: String?
 ){
     protected constructor() : this(Builder())
@@ -22,9 +22,11 @@ data class SocialMedia(
             private set
         var socialMedia: String? = ""
             private set
+
+        fun name(name: String) = apply { this.name = name }
+        fun socialMedia(socialMedia: String) = apply { this.socialMedia = socialMedia }
     }
 
-    fun name(name: String) = apply { this.name = name }
-    fun socialMedia(socialMedia: String) = apply { this.socialMedia = socialMedia }
+
 
 }

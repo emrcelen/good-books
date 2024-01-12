@@ -8,7 +8,7 @@ import jakarta.persistence.Table
 data class Author(
     var authorName: String?,
     var authorSurname: String?
-){
+) {
     protected constructor() : this(Builder())
 
     private constructor(builder: Builder) : this(
@@ -21,9 +21,9 @@ data class Author(
             private set
         var authorSurname: String? = ""
             private set
+
+
+        fun authorName(authorName: String) = apply { this.authorName = authorName }
+        fun authorSurname(authorSurname: String) = apply { this.authorSurname = authorSurname }
     }
-
-    fun authorName(authorName: String) = apply { this.authorName = authorName }
-    fun authorSurname(authorSurname: String) = apply { this.authorSurname = authorSurname }
-
 }

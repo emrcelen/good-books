@@ -21,8 +21,10 @@ data class UserFollow(
             private set
         var followersID: Account? = null
             private set
+
+        fun followingID(followingID: Account) = apply { this.followingID = followingID }
+        fun followersID(followersID: Account) = apply { this.followersID = followersID }
     }
 
-    fun followingID(followingID: Account) = apply { this.followingID = followingID }
-    fun followersID(followersID: Account) = apply { this.followersID = followersID }
+
 }

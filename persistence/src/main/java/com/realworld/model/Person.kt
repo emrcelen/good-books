@@ -7,8 +7,8 @@ import jakarta.persistence.Table
 @Entity(name = "Person")
 @Table(name = "person")
 data class Person(
-    var name: String?,
-    var surname: String?,
+    val name: String?,
+    val surname: String?,
     var biography: String?,
     var profilePhoto: String?,
     @OneToMany
@@ -36,11 +36,13 @@ data class Person(
             private set
         var personSocialMedia: Set<SocialMedia>? = null
             private set
+
+        fun name(name: String) = apply { this.name = name }
+        fun surname(surname: String) = apply { this.surname = surname }
+        fun biography(biography: String) = apply { this.biography = biography }
+        fun profilePhoto(profilePhoto: String) = apply { this.profilePhoto = profilePhoto }
+        fun personSocialMedia(personSocialMedia: Set<SocialMedia>) = apply { this.personSocialMedia = personSocialMedia }
     }
 
-    fun name(name: String) = apply { this.name = name }
-    fun surname(surname: String) = apply { this.surname = surname }
-    fun biography(biography: String) = apply { this.biography = biography }
-    fun profilePhoto(profilePhoto: String) = apply { this.profilePhoto = profilePhoto }
-    fun personSocialMedia(personSocialMedia: Set<SocialMedia>) = apply { this.personSocialMedia = personSocialMedia }
+
 }
