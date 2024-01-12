@@ -12,20 +12,23 @@ data class BookSaleInfo(
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
     @Column(name = "book_sale_info_id")
     val id: UUID?,
+    @Column(length = 25)
     var country: String?,
+    @Column(length = 25)
     var salebility: String?,
     @Embedded
     @AttributeOverrides(
         AttributeOverride(name = "amount", column = Column(name = "list_price_amount")),
-        AttributeOverride(name = "currencyCode", column = Column(name = "list_price_currency"))
+        AttributeOverride(name = "currencyCode", column = Column(name = "list_price_currency", length = 5))
     )
     var listPrice: SalePrice?,
     @Embedded
     @AttributeOverrides(
         AttributeOverride(name = "amount", column = Column(name = "retail_price_amount")),
-        AttributeOverride(name = "currencyCode", column = Column(name = "retail_price_currency"))
+        AttributeOverride(name = "currencyCode", column = Column(name = "retail_price_currency", length = 5))
     )
     var retailPrice: SalePrice?,
+    @Column(length = 175, unique = true)
     var buyLink: String?,
     var ebook: Boolean?,
     @OneToOne

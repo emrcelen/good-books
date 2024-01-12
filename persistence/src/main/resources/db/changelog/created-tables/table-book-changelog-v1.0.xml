@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <changeSet id="table-book-changelog-v1.0.xml" author="emrecelen">
+        <createTable tableName="book" schemaName="good_books">
+            <column name="book_id" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="title" type="varchar(255)"/>
+            <column name="description" type="varchar(500)"/>
+            <column name="publisher" type="varchar(150)"/>
+            <column name="page_count" type="smallint"/>
+            <column name="pdf_link" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
