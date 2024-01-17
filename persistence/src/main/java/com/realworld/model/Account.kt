@@ -17,7 +17,7 @@ data class Account(
     var password: String?,
     @Enumerated
     var role: Role?,
-    @OneToOne
+    @OneToOne(mappedBy = "userfollow")
     var following: Set<UserFollow>?,
     @OneToOne
     var followers: Set<UserFollow>?,
@@ -79,5 +79,6 @@ data class Account(
         fun accountLock(accountLock: Boolean) = apply { this.accountLock = accountLock }
         fun credentialSlock(credentialSlock: Boolean) = apply { this.credentialSlock = credentialSlock }
         fun enabled(enabled: Boolean) = apply { this.enabled = enabled }
+        fun build() = Account(this)
     }
 }

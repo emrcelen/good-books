@@ -1,5 +1,6 @@
 package com.realworld.model
 
+
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
@@ -8,6 +9,7 @@ import jakarta.persistence.ManyToMany
 import jakarta.persistence.Table
 import org.hibernate.annotations.GenericGenerator
 import java.util.*
+
 
 @Entity(name = "Author")
 @Table(name = "author", schema = "good_books")
@@ -32,10 +34,13 @@ data class Author(
     )
 
     class Builder {
+        var id: Long? = null
+            private set
         var authorName: String? = ""
             private set
         var authorSurname: String? = ""
             private set
+
         var books: Set<Book>? = null
             private set
 
