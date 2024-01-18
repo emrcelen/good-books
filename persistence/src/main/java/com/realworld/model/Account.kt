@@ -20,10 +20,18 @@ data class Account(
     @ManyToMany(mappedBy = "followers")
     var following: Set<Account>?,
     @ManyToMany
-    @JoinTable(name = "account_followers", schema = "good_books", joinColumns = [JoinColumn (name = "account_id")],
-               inverseJoinColumns = [JoinColumn (name = "follower_id")])
+    @JoinTable(
+        name = "account_followers", schema = "good_books",
+        joinColumns = [JoinColumn(name = "account_id")],
+        inverseJoinColumns = [JoinColumn(name = "follower_id")]
+    )
     var followers: Set<Account>?,
     @ManyToMany
+    @JoinTable(
+        name = "account_favorite_books", schema = "good_books",
+        joinColumns = [JoinColumn(name = "account_id")],
+        inverseJoinColumns = [JoinColumn(name = "book_id")]
+    )
     var favorites: Set<Book>?,
     var accountExpired: Boolean?,
     var accountLock: Boolean?,
