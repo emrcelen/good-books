@@ -13,11 +13,13 @@
     <include file="db/changelog/created-tables/table-category-changelog-v1.0.xml"/>
     <include file="db/changelog/created-tables/table-book-authors-changelog-v1.0.xml"/>
     <include file="db/changelog/created-tables/table-book-categories-changelog.v1.0.xml"/>
+    <include file="db/changelog/created-tables/table-account-favorite-books-changelog.v1.0.xml"/>
     <!--Constraint table-->
     <include file="db/changelog/constraint-tables/table-book-image-link-constraint-v1.0.xml"/>
     <include file="db/changelog/constraint-tables/table-book-sale-info-constraint-v1.0.xml"/>
     <include file="db/changelog/constraint-tables/table-category-constraint-v1.0.xml"/>
     <include file="db/changelog/constraint-tables/table-book-authors-constraint-v1.0.xml"/>
     <include file="db/changelog/constraint-tables/table-book-categories-constraint-v1.0.xml"/>
+    <!--<include file="db/changelog/constraint-tables/table-account-favorite-books-constraint-v1.0.xml"/>-->
     <!--Insert data-->
 </databaseChangeLog>
