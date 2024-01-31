@@ -16,6 +16,8 @@
     <include file="db/changelog/created-tables/table-account-favorite-books-changelog.v1.0.xml"/>
     <include file="db/changelog/created-tables/table-account-followers-changelog-v1.0.xml"/>
     <include file="db/changelog/created-tables/table-account-changelog-v1.0.xml"/>
+    <include file="db/changelog/created-tables/table-social-media-changelog-v1.0.xml"/>
+    <include file="db/changelog/created-tables/table-person-changelog-v1.0.xml"/>
 
     <!--Constraint table-->
     <include file="db/changelog/constraint-tables/table-book-image-link-constraint-v1.0.xml"/>
@@ -24,6 +26,8 @@
     <include file="db/changelog/constraint-tables/table-book-authors-constraint-v1.0.xml"/>
     <include file="db/changelog/constraint-tables/table-book-categories-constraint-v1.0.xml"/>
     <include file="db/changelog/constraint-tables/table-account-followers-constraint-v1.0.xml"/>
+    <include file="db/changelog/constraint-tables/table-social-media-constraint-v1.0.xml"/>
+    <include file="db/changelog/constraint-tables/table-person-constraint-v1.0.xml"/>
     <!--<include file="db/changelog/constraint-tables/table-account-favorite-books-constraint-v1.0.xml"/>-->
     <!--Insert data-->
 </databaseChangeLog>

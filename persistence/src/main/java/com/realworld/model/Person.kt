@@ -8,11 +8,12 @@ data class Person(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long?,
+
     val name: String?,
     val surname: String?,
     var biography: String?,
     var profilePhoto: String?,
-    @OneToMany
+    @OneToMany(mappedBy = "socialmedia")
     var personSocialMedia: Set<SocialMedia>?
 
 ) {

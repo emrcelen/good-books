@@ -1,0 +1,10 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet id="table-person-constraint-v1.0.xml" author="cagataysar">
+        <addUniqueConstraint tableName="person" columnNames="person_table"
+                             schemaName="good_books"/>
+    </changeSet>
+</databaseChangeLog>

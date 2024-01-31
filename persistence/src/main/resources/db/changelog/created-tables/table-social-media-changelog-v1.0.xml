@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <databaseChangeLog
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
 
-    <changeSet id="table-category-changelog-v1.0.xml" author="cagataysar">
-        <createTable tableName="bookcategory" schemaName="good_books">
-            <column name="category_id" type="bigint" autoIncrement="true">
+    <changeSet id="table-social-media-changelog-v1.0.xml" author="cagataysar">
+        <createTable tableName="socialmedia" schemaName="good_books">
+            <column name="socialmedia_id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="category_name" type="varchar(255)"/>
+            <column name="socialmedia_name" type="varchar(255)"/>
+            <column name="socialmedia" type="varchar(255)"/>
         </createTable>
     </changeSet>
 </databaseChangeLog>
