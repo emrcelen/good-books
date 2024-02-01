@@ -8,13 +8,14 @@ data class Person(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long?,
-
+    @Column(name = "person_name")
     val name: String?,
+    @Column(name = "person_surname")
     val surname: String?,
+    @Column(name = "person_biography")
     var biography: String?,
-    var profilePhoto: String?,
-    @OneToMany(mappedBy = "socialmedia")
-    var personSocialMedia: Set<SocialMedia>?
+    @Column(name = "person_photo")
+    var profilePhoto: String?
 
 ) {
     protected constructor() : this(Builder())
@@ -25,7 +26,6 @@ data class Person(
         builder.surname,
         builder.biography,
         builder.profilePhoto,
-        builder.personSocialMedia
     )
 
     class Builder {
@@ -39,15 +39,13 @@ data class Person(
             private set
         var profilePhoto: String? = ""
             private set
-        var personSocialMedia: Set<SocialMedia>? = null
-            private set
+
 
         fun id(id: Long) = apply { this.id = id }
         fun name(name: String) = apply { this.name = name }
         fun surname(surname: String) = apply { this.surname = surname }
         fun biography(biography: String) = apply { this.biography = biography }
         fun profilePhoto(profilePhoto: String) = apply { this.profilePhoto = profilePhoto }
-        fun personSocialMedia(personSocialMedia: Set<SocialMedia>) = apply { this.personSocialMedia = personSocialMedia }
         fun build() = Person(this)
     }
 }

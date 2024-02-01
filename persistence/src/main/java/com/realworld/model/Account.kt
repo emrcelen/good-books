@@ -33,6 +33,8 @@ data class Account(
         inverseJoinColumns = [JoinColumn(name = "book_id")]
     )
     var favorites: Set<Book>?,
+    @OneToMany(mappedBy = "account")
+    var socialMedia: Set<SocialMedia>?,
     var accountExpired: Boolean?,
     var accountLock: Boolean?,
     var credentialSlock: Boolean?,
@@ -49,6 +51,7 @@ data class Account(
         builder.following,
         builder.followers,
         builder.favorites,
+        builder.socialMedia,
         builder.accountExpired,
         builder.accountLock,
         builder.credentialSlock,
@@ -70,6 +73,8 @@ data class Account(
             private set
         var favorites: Set<Book>? = null
             private set
+        var socialMedia: Set<SocialMedia>? = null
+            private set
         var accountExpired: Boolean? = null
             private set
         var accountLock: Boolean? = null
@@ -85,6 +90,7 @@ data class Account(
         fun following(following: Set<Account>) = apply { this.following = following }
         fun followers(followers: Set<Account>) = apply { this.followers = followers }
         fun favorites(favorites: Set<Book>) = apply { this.favorites = favorites }
+        fun socialMedia(socialMedia: Set<SocialMedia>) = apply { this.socialMedia = socialMedia }
         fun accountExpired(accountExpired: Boolean) = apply { this.accountExpired = accountExpired }
         fun accountLock(accountLock: Boolean) = apply { this.accountLock = accountLock }
         fun credentialSlock(credentialSlock: Boolean) = apply { this.credentialSlock = credentialSlock }

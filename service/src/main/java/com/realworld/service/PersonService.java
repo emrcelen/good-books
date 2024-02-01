@@ -9,7 +9,10 @@ import java.util.Optional;
 
 @Service
 public class PersonService {
-
+    /**
+     * Sayfalama ile datalar gelecek,
+     * Kontroller eklenecek.
+     */
     private PersonRepository personRepository;
 
     public Person savePerson(Person person) {
@@ -21,11 +24,11 @@ public class PersonService {
         return personRepository.findAll();
     }
 
-    public List< Person > getByName(String name) {
+    public List<Person> getByName(String name) {
         return personRepository.getByName(name);
     }
 
-    public Optional< Person > getById(Long id) {
+    public Optional<Person> getById(Long id) {
         return personRepository.findById(id);
     }
 

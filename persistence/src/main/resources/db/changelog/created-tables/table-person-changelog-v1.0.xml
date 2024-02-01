@@ -11,7 +11,7 @@
             </column>
             <column name="person_name" type="varchar(255)"/>
             <column name="person_surname" type="varchar(255)"/>
-<!--            <column name="biography" type="varchar(255)"/>-->
+            <column name="person_biography" type="varchar(255)"/>
             <column name="person_photo" type="varchar(255)"/>
         </createTable>
     </changeSet>
