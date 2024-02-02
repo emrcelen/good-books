@@ -6,11 +6,12 @@
 
     <changeSet id="table-social-media-changelog-v1.0.xml" author="cagataysar">
         <createTable tableName="socialmedia" schemaName="good_books">
-            <column name="socialmedia_id" type="bigint" autoIncrement="true">
+            <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="socialmedia_name" type="varchar(255)"/>
-            <column name="socialmedia" type="varchar(255)"/>
+            <column name="url" type="varchar(255)"/>
+            <column name="platform" type="varchar(50)"/>
+            <column name="account_id" type="bigint"/>
         </createTable>
     </changeSet>
 </databaseChangeLog>
