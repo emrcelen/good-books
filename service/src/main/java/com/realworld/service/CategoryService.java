@@ -145,13 +145,13 @@ public class CategoryService {
         return categoryBO;
     }
     private boolean categoryCreateControl(CategoryBO category) {
-        //Todo: kitaplar için de set tanımının oluşup oluşmadığına bak.
         if (category != null && category.categoryName() != null && !category.categoryName().isEmpty()) {
             BookCategories categoryPO = this.categoryRepository.findByCategoryName(category.categoryName())
                     .orElse(null);
             return categoryPO == null ? true : false;
         }
-        throw new IllegalArgumentException("Kanka sen bana yanlış bir şeyler verdin");
+        throw new IllegalArgumentException
+                ("An unexpected error occurred, please try again later or contact the system administrator.");
     }
     private boolean findAllPageableControl(int page, int pageSize) {
         return page > 0 && pageSize > 0 ? true : false;
